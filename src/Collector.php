@@ -32,6 +32,8 @@ class Collector
             }
         } catch (\Exception $e) {
             $this->rollback();
+
+            return false;
         }
 
         return $result;
@@ -44,5 +46,15 @@ class Collector
             $job->rollback();
             $this->onError[] = $job->onError();
         }
+    }
+
+    public function getSuccess()
+    {
+        return $this->onSuccess;
+    }
+
+    public function getError()
+    {
+        return $this->onError;
     }
 }
