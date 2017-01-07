@@ -19,7 +19,7 @@ JobCollector\Job
 - onSuccess()  if **handle** method run successfully then **onSuccess** run  and keep the method's return ;
 - onError() if **handle** method ***throw exception*** then **onError** run and keep the method's return ;
 
-Collector
+JobCollector\Collector
 --
 **JobCollector\Collector** has 4 methods
 
@@ -32,7 +32,7 @@ Usage
 ----
 
 //GetPayment.php
-```
+```php
 <?php namespace Jobs;
 
 use JobCollector\Job;
@@ -80,7 +80,7 @@ class GetPayment implements Job
 ```
 //ExampleController.php
 
-```
+```php
 <?php
 
 use JobCollector\Collector;
