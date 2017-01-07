@@ -1,0 +1,15 @@
+{
+  "name": "ygto/job-collector",
+  "authors": [
+    {
+      "name": "yigit oztemel",
+      "email": "yigitoztemel@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-0": {
+      "JobCollector": "src/"
+    }
+  }
+}
