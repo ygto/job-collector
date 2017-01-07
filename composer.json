@@ -1,6 +1,6 @@
 {
   "name": "ygto/job-collector",
-  "description": "don't mess around so much when handling too much process.",
+  "description": "job collector to write more clean code",
   "authors": [
     {
       "name": "yigit oztemel",

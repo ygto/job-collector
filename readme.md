@@ -1,7 +1,7 @@
 **Job Collector**
 ==================
 
-    don't mess around so much when handling too much process.
+    don't mess around when handling too much process.
 
 Installation
 ------------
