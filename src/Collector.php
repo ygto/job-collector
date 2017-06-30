@@ -2,10 +2,10 @@
 
 class Collector
 {
-    protected $collection = [ ];
-    protected $handled = [ ];
-    protected $onSuccess = [ ];
-    protected $onError = [ ];
+    protected $collection = [];
+    protected $handled = [];
+    protected $onSuccess = [];
+    protected $onError;
 
     /**
      * @param Job $job
@@ -24,16 +24,16 @@ class Collector
     public function handle()
     {
         $result = true;
-        $activeJob=null;
+        $activeJob = null;
         try {
             foreach ($this->collection as $job) {
-                $activeJob=$job;
+                $activeJob = $job;
                 $this->handled[] = $job;
                 $job->handle();
                 $this->onSuccess[] = $job->onSuccess();
             }
         } catch (\Exception $e) {
-            $this->onError[] = $activeJob->onError();
+            $this->onError = $activeJob->onError();
             $this->rollback();
 
             return false;
