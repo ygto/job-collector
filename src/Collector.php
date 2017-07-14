@@ -1,4 +1,4 @@
-<?php namespace Collector;
+<?php namespace JobCollector;
 
 class Collector
 {
