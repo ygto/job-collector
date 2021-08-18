@@ -1,4 +1,4 @@
-<?php namespace JobCollector;
+<?php namespace Ygto\JobCollector;
 
 class Collector
 {
